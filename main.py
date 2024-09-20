@@ -6,7 +6,7 @@ from subsubclases.motocicleta import Motocicleta
 if __name__ == "__main__":
     mi_vehiculo = Coche("Naranja fosforito", 4, 180, 2000)
     print(mi_vehiculo)
-    mi_vehiculo2 = Bicicleta("purpura", 4, 150, 1200)
+    mi_vehiculo2 = Bicicleta("purpura", 2, deportiva)
     print (mi_vehiculo2)
     mi_vehiculo3 = Camioneta("BMW", "x5", 1000)
     print (mi_vehiculo3)

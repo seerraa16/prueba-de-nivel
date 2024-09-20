@@ -1,7 +1,6 @@
 class Bicicleta:
-    def __init__(self, marca, modelo, color, tipo):
-        self.marca = marca
-        self.modelo = modelo
+    def __init__(self, color, ruedas, tipo):
+        self.ruedas = ruedas
         self.color = color
         self.tipo = tipo
 
