@@ -9,4 +9,4 @@ class Coche(Vehiculo):
 		self.cilindrada = cilindrada
 
 	def __str__(self):
-		return "color {}, {} km/h, {} ruedas, {} cc".format(self.color, self.velocidad, self.ruedas, self.cilindrada)
+		return f"Coche, {super().__str__()}, Velocidad: {self.velocidad}, Cilindrada: {self.cilindrada}"

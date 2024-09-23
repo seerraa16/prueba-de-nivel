@@ -6,11 +6,5 @@ class Bicicleta(Vehiculo):
 
         self.tipo = tipo
 
-    def arrancar(self):
-        print(f"La bicicleta {self.color} está lista para rodar.")
-
-    def frenar(self):
-        print(f"La bicicleta {self.color} está frenando.")
-
-    def __str__(self):
-        return f"Bicicleta(color={self.color}, tipo={self.tipo}, ruedas={self.ruedas})"
+    def __str__(self):      
+        return f"Bicicleta, {super().__str__()}, Tipo: {self.tipo}"
