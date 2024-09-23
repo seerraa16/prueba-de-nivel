@@ -1,6 +1,7 @@
 # Prueba de nivel
 ## Nombre: Alejandro Serrano Catalina
-Link al repositorio: 
+Link al repositorio: https://github.com/seerraa16/prueba-de-nivel.git
+                
 ## Ejercicios de herencias
 ### Teoría previa
 En este ejercicio vas a trabajar el concepto de herencia un poco más en
