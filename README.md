@@ -10,24 +10,26 @@ Hasta ahora sabemos que una clase heredada puede fácilmente extender
 algunas funcionalidades, simplemente añadiendo nuevos atributos y métodos,
 o sobreescribiendo los ya existentes. Como en el siguiente ejemplo:
 
-class Vehiculo():
- def __init__(self, color, ruedas):
- self.color = color
- self.ruedas = ruedas
- def __str__(self):
- return "Color {}, {} ruedas".format( self.color, self.ruedas )
-class Coche(Vehiculo):
- def __init__(self, color, ruedas, velocidad, cilindrada):
- self.color = color
- self.ruedas = ruedas
- self.velocidad = velocidad
- self.cilindrada = cilindrada
- def __str__(self):
- return "color {}, {} km/h, {} ruedas, {} cc".format(
-self.color, self.velocidad, self.ruedas, self.cilindrada )
-coche = Coche("azul", 150, 4, 1200)
-print(coche)
-Color azul, 4 km/h, 150 ruedas, 1200 cc
+```
+    class Vehiculo():
+    def __init__(self, color, ruedas):
+    self.color = color
+    self.ruedas = ruedas
+    def __str__(self):
+    return "Color {}, {} ruedas".format( self.color, self.ruedas )
+    class Coche(Vehiculo):
+    def __init__(self, color, ruedas, velocidad, cilindrada):
+    self.color = color
+    self.ruedas = ruedas
+    self.velocidad = velocidad
+    self.cilindrada = cilindrada
+    def __str__(self):
+    return "color {}, {} km/h, {} ruedas, {} cc".format(
+    self.color, self.velocidad, self.ruedas, self.cilindrada )
+    coche = Coche("azul", 150, 4, 1200)
+    print(coche)
+    Color azul, 4 km/h, 150 ruedas, 1200 cc
+```
 
 El inconveniente más evidente de ir sobreescribiendo es que tenemos que
 volver a escribir el código de la superclase y luego el específico de la subclase.
@@ -35,23 +37,25 @@ Para evitarnos escribir código innecesario, podemos utilizar un truco que
 consiste en llamar el método de la superclase y luego simplemente escribir el
 código de la clase:
 
-class Vehiculo():
- def __init__(self, color, ruedas):
- self.color = color
- self.ruedas = ruedas
- def __str__(self):
- return "Color {}, {} ruedas".format( self.color, self.ruedas )
-class Coche(Vehiculo):
- def __init__(self, color, ruedas, velocidad, cilindrada):
- Vehiculo.__init__(self, color, ruedas)
- self.velocidad = velocidad
- self.cilindrada = cilindrada
- def __str__(self):
- return Vehiculo.__str__(self) + ", {} km/h, {}
-cc".format(self.velocidad, self.cilindrada)
-c = Coche("azul", 4, 150, 1200)
-print(c)
-Color azul, 4 ruedas, 150 km/h, 1200 cc
+```
+    class Vehiculo():
+    def __init__(self, color, ruedas):
+    self.color = color
+    self.ruedas = ruedas
+    def __str__(self):
+    return "Color {}, {} ruedas".format( self.color, self.ruedas )
+    class Coche(Vehiculo):
+    def __init__(self, color, ruedas, velocidad, cilindrada):
+    Vehiculo.__init__(self, color, ruedas)
+    self.velocidad = velocidad
+    self.cilindrada = cilindrada
+    def __str__(self):
+    return Vehiculo.__str__(self) + ", {} km/h, {}
+    cc".format(self.velocidad, self.cilindrada)
+    c = Coche("azul", 4, 150, 1200)
+    print(c)
+    Color azul, 4 ruedas, 150 km/h, 1200 cc
+```
 
 Como tener que determinar constantemente la superclase puede ser fastidioso,
 Python nos permite utilizar un acceso directo mucho más cómodo
@@ -60,23 +64,25 @@ Hacerlo de esta forma además nos permite llamar cómodamente los métodos
 o atributos de la superclase sin necesidad de especificar el self, pero ojo, sólo
 se aconseja utilizarlo cuando tenemos una única superclase:
 
-class Vehiculo():
- def __init__(self, color, ruedas):
- self.color = color
- self.ruedas = ruedas
- def __str__(self):
- return "color {}, {} ruedas".format( self.color, self.ruedas )
-class Coche(Vehiculo):
- def __init__(self, color, ruedas, velocidad, cilindrada):
- Vehiculo.__init__(self, color, ruedas)
- self.velocidad = velocidad
- self.cilindrada = cilindrada
- def __str__(self):
- return Vehiculo.__str__(self) + ", {} km/h, {}
-cc".format(self.velocidad, self.cilindrada)
-c = Coche("azul", 4, 150, 1200)
-print(c)
-Color azul, 4 km/h, 150 ruedas, 1200 cc
+```
+    class Vehiculo():
+    def __init__(self, color, ruedas):
+    self.color = color
+    self.ruedas = ruedas
+    def __str__(self):
+    return "color {}, {} ruedas".format( self.color, self.ruedas )
+    class Coche(Vehiculo):
+    def __init__(self, color, ruedas, velocidad, cilindrada):
+    Vehiculo.__init__(self, color, ruedas)
+    self.velocidad = velocidad
+    self.cilindrada = cilindrada
+    def __str__(self):
+    return Vehiculo.__str__(self) + ", {} km/h, {}
+    cc".format(self.velocidad, self.cilindrada)
+    c = Coche("azul", 4, 150, 1200)
+    print(c)
+    Color azul, 4 km/h, 150 ruedas, 1200 cc
+```
 
 #### Enunciado 
 Utilizando esta nueva técnica extiende la clase Vehiculo y realiza la siguiente

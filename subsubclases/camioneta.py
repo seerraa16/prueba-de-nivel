@@ -8,6 +8,6 @@ class Camioneta(Coche):
 
 
     def __str__(self):
-        return f"Camioneta, {super().__str__()}, Capacidad de carga: {self.capacidad_carga}"
+        return f"{super().__str__()}, Capacidad de carga: {self.capacidad_carga}"
     
 

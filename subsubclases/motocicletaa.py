@@ -7,4 +7,4 @@ class Motocicleta(Bicicleta):
         self.velocidad = velocidad
 
     def __str__(self):
-        return f"Motocicleta, {super().__str__()}, Velocidad: {self.velocidad}, Cilindrada: {self.cilindrada}"
+        return f"{super().__str__()}, Velocidad: {self.velocidad}, Cilindrada: {self.cilindrada}"

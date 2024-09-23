@@ -9,4 +9,4 @@ class Coche(Vehiculo):
 		self.cilindrada = cilindrada
 
 	def __str__(self):
-		return f"Coche, {super().__str__()}, Velocidad: {self.velocidad}, Cilindrada: {self.cilindrada}"
+		return f"{super().__str__()}, Velocidad: {self.velocidad}, Cilindrada: {self.cilindrada}"

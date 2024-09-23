@@ -7,4 +7,4 @@ class Bicicleta(Vehiculo):
         self.tipo = tipo
 
     def __str__(self):      
-        return f"Bicicleta, {super().__str__()}, Tipo: {self.tipo}"
+        return f"{super().__str__()}, Tipo: {self.tipo}"
