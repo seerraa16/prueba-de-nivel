@@ -1,6 +1,7 @@
 # Prueba de nivel
 ## Nombre: Alejandro Serrano Catalina
-Link al repositorio: https://github.com/seerraa16/prueba-de-nivel.git
+Links al repositorio: https://github.com/seerraa16/prueba-de-nivel.git
+                      gh repo clone seerraa16/prueba-de-nivel
                 
 ## Ejercicios de herencias
 ### Teoría previa
